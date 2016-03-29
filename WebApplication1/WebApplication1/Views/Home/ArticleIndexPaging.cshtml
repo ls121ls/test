@@ -1,0 +1,41 @@
+﻿@using ConsoleApplication1
+@using Model
+@{Layout = null;}
+<html>
+<head>
+    <title>2333</title>
+    <link href="~/Content/jquery.mobile-1.4.5.css" rel="stylesheet" />
+    <script src="~/Scripts/jquery-1.10.2.js"></script>
+    <script src="~/Scripts/jquery.mobile-1.4.5.js"></script>
+</head>
+<body>
+
+    <div data-role="page" id="pageone">
+        <div data-role="panel" id="myPanel">
+            <h2>面板头部..</h2>
+            <p>面板内容..</p>
+        </div>
+        <div data-role="header">
+            <a href="#myPanel" data-role="button">首页</a>
+            <h1>欢迎来到我的主页</h1>
+            <a href="#" data-role="button">搜索</a>
+        </div>
+        <div data-role="content">
+            <h2>包含缩略图和文本的列表：</h2>
+            <ul data-role="listview" data-inset="true">
+                @foreach (entry e in Model.entry)
+            {
+                    <li>
+                        <a href="/Home/About?id=@e.id">
+                            <h2>@e.title</h2>
+                            <p>@e.summary)</p>
+                        </a>
+                    </li>
+                }
+            </ul>
+            <ul data-role="page"></ul>
+        </div>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,29 @@
+﻿@{
+    Layout = null;
+}
+<html>
+<head>
+    <title>2333</title>
+    <link href="~/Content/jquery.mobile-1.4.5.css" rel="stylesheet" />
+    <script src="~/Scripts/jquery-1.10.2.js"></script>
+    <script src="~/Scripts/jquery.mobile-1.4.5.js"></script>
+</head>
+<body>
+
+    <div data-role="page" id="pageone">
+        <div data-role="panel" id="myPanel">
+            <h2>面板头部..</h2>
+            <p>面板内容..</p>
+        </div>
+        <div data-role="header">
+            <a href="#myPanel" data-role="button">首页</a>
+            <h1>欢迎来到我的主页</h1>
+            <a href="#" data-role="button">搜索</a>
+        </div>
+        <div data-role="content">
+            @Html.Raw(ViewBag.Content)
+        </div>
+    </div>
+
+</body>
+</html>
